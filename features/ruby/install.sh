@@ -46,8 +46,7 @@ if [[ ! -d "/usr/local/share/rbenv" ]]; then
         -c fsck.zeroPaddedFilemode=ignore \
         -c fetch.fsck.zeroPaddedFilemode=ignore \
         -c receive.fsck.zeroPaddedFilemode=ignore \
-        https://github.com/rbenv/rbenv.git /usr/local/share/rbenv
-    ln -s /usr/local/share/rbenv /home/${USERNAME}/.rbenv
+        https://github.com/rbenv/rbenv.git /home/${USERNAME}/.rbenv
 fi
 
 if [[ ! -d "/usr/local/share/ruby-build" ]]; then
