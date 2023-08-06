@@ -2,6 +2,4 @@
 
 set -e
 
-rvm --help
-
 echo "done!"

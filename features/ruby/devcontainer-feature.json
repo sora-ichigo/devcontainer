@@ -11,5 +11,6 @@
       "settings": {
       }
     },
+    "onCreateCommand": ["rvm", "install", "3.1.4"],
     "installsAfter": ["ghcr.io/devcontainers/features/ruby:1", "ghcr.io/igsr5/devcontainer/common-tools:latest"]
   }
