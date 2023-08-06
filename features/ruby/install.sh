@@ -47,8 +47,6 @@ if [[ ! -d "/usr/local/share/rbenv" ]]; then
         -c fetch.fsck.zeroPaddedFilemode=ignore \
         -c receive.fsck.zeroPaddedFilemode=ignore \
         https://github.com/rbenv/rbenv.git /usr/local/share/rbenv
-
-    ln -s /usr/local/share/rbenv /root/.rbenv
 fi
 
 if [[ ! -d "/usr/local/share/ruby-build" ]]; then
@@ -60,12 +58,14 @@ if [[ ! -d "/usr/local/share/ruby-build" ]]; then
         -c receive.fsck.zeroPaddedFilemode=ignore \
         https://github.com/rbenv/ruby-build.git /usr/local/share/ruby-build
     mkdir -p /root/.rbenv/plugins
+fi
 
-    ln -s /usr/local/share/ruby-build /root/.rbenv/plugins/ruby-build
+
+if [[ ! -d "/home/${USERNAME}/.rbenv" ]]; then
+    ln -s /usr/local/share/rbenv /home/${USERNAME}/.rbenv
 fi
 
 mkdir -p /home/${USERNAME}/.rbenv/plugins
-
 if [[ ! -d "/home/${USERNAME}/.rbenv/plugins/ruby-build" ]]; then
     ln -s /usr/local/share/ruby-build /home/${USERNAME}/.rbenv/plugins/ruby-build
 fi
