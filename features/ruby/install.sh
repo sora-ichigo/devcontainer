@@ -47,6 +47,8 @@ if [[ ! -d "/usr/local/share/rbenv" ]]; then
         -c fetch.fsck.zeroPaddedFilemode=ignore \
         -c receive.fsck.zeroPaddedFilemode=ignore \
         https://github.com/rbenv/rbenv.git /usr/local/share/rbenv
+
+    ln -s /usr/local/share/rbenv /root/.rbenv
 fi
 
 if [[ ! -d "/usr/local/share/ruby-build" ]]; then
@@ -68,7 +70,7 @@ if [[ ! -d "/home/${USERNAME}/.rbenv/plugins/ruby-build" ]]; then
     ln -s /usr/local/share/ruby-build /home/${USERNAME}/.rbenv/plugins/ruby-build
 fi
 
-echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> $USER_HOME/.bashrc
+echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> /home/${USERNAME}/.bashrc
 eval "$(/usr/local/share/rbenv/bin/rbenv init - bash)"
 rbenv install ${RUBY_VERSION}
 
