@@ -1,6 +1,6 @@
 {
     "id": "ruby",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "name": "ruby for igsr5",
     "customizations": {
       "vscode": {
@@ -12,4 +12,4 @@
       "settings": {
       }
     }
-  }
+}
