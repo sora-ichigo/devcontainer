@@ -3,43 +3,34 @@
   "version": "1.0.0",
   "name": "development tools for igsr5",
   "customizations": {
-    // Configure properties specific to VS Code.
     "vscode": {
-      // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
-        // For ruby development
         "rebornix.Ruby",
         "kaiwood.endwise",
 
-        // For golang development
         "golang.go",
 
-        // For frontend development
         "GraphQL.vscode-graphql-syntax",
         "esbenp.prettier-vscode",
         "figma.figma-vscode-extension",
-        "crystal-spider.jsdoc-generator", // command + shift + p -> generate jsdoc. added by @igsr5
+        "crystal-spider.jsdoc-generator",
 
-        // For dx development
         "github.vscode-github-actions",
 
-        // For general development
         "github.copilot",
         "gitHub.copilot-chat",
         "ms-vsliveshare.vsliveshare",
         "formulahendry.auto-close-tag",
-        "eamodio.gitlens", // ファイル選択行の git history を表示 added by @igsr5
-        "alefragnani.Bookmarks", // 任意の行をブックマークしていつでもジャンプできるようになる added by @igsr5
-        "zhang-renyang.chat-gpt", // vscode 上で ChatGPT が使えるようになる added by @igsr5
-        "usernamehw.errorlens" // エラーのインライン表示 added by @igsr5
+        "eamodio.gitlens",
+        "alefragnani.Bookmarks",
+        "zhang-renyang.chat-gpt",
+        "usernamehw.errorlens"
       ]
     },
     "settings": {
-      // For frontend development
-      "typescript.preferGoToSourceDefinition": true, // definition jump の先を型ではなく実装にする added by @igsr5
-      "javascript.preferGoToSourceDefinition": true, // definition jump の先を型ではなく実装にする added by @igsr5
+      "typescript.preferGoToSourceDefinition": true,
+      "javascript.preferGoToSourceDefinition": true,
 
-      // For general development
       "files.insertFinalNewline": true,
       "files.trimTrailingWhitespace": true
     }
