@@ -69,7 +69,7 @@ chmod -R 755 /home/${USERNAME}/.rbenv
 # sudo -u ${USERNAME} -H sh -c "/home/${USERNAME}/.rbenv/bin/rbenv install \${RUBY_VERSION}"
 # sudo -u ${USERNAME} -H sh -c "rbenv global \${RUBY_VERSION}"
 sudo -u ${USERNAME} -H sh -c "/home/${USERNAME}/.rbenv/bin/rbenv install 3.1.4"
-sudo -u ${USERNAME} -H sh -c "rbenv global 3.1.4"
+sudo -u ${USERNAME} -H sh -c "/home/${USERNAME}/.rbenv/bin/rbenv global 3.1.4"
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
