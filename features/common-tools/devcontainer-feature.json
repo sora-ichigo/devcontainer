@@ -15,8 +15,6 @@
         "figma.figma-vscode-extension",
         "crystal-spider.jsdoc-generator",
 
-        "github.vscode-github-actions",
-
         "github.copilot",
         "gitHub.copilot-chat",
         "ms-vsliveshare.vsliveshare",
@@ -24,7 +22,8 @@
         "eamodio.gitlens",
         "alefragnani.Bookmarks",
         "zhang-renyang.chat-gpt",
-        "usernamehw.errorlens"
+        "usernamehw.errorlens",
+        "github.vscode-github-actions"
       ]
     },
     "settings": {
