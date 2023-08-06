@@ -11,6 +11,5 @@
       },
       "settings": {
       }
-    },
-    "installsAfter": ["ghcr.io/igsr5/devcontainer/common-tools"]
+    }
   }
