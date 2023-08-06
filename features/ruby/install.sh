@@ -46,32 +46,22 @@ if [[ ! -d "/usr/local/share/rbenv" ]]; then
         -c fsck.zeroPaddedFilemode=ignore \
         -c fetch.fsck.zeroPaddedFilemode=ignore \
         -c receive.fsck.zeroPaddedFilemode=ignore \
-        https://github.com/rbenv/rbenv.git /usr/local/share/rbenv
+        https://github.com/rbenv/rbenv.git /home/${USERNAME}/.rbenv
 fi
 
 if [[ ! -d "/usr/local/share/ruby-build" ]]; then
+    mkdir -p /home/${USERNAME}/.rbenv/plugins
     git clone --depth=1 \
         -c core.eol=lf \
         -c core.autocrlf=false \
         -c fsck.zeroPaddedFilemode=ignore \
         -c fetch.fsck.zeroPaddedFilemode=ignore \
         -c receive.fsck.zeroPaddedFilemode=ignore \
-        https://github.com/rbenv/ruby-build.git /usr/local/share/ruby-build
-    mkdir -p /root/.rbenv/plugins
+        https://github.com/rbenv/ruby-build.git /home/${USERNAME}/.rbenv/plugins/ruby-build
 fi
 
-
-if [[ ! -d "/home/${USERNAME}/.rbenv" ]]; then
-    ln -s /usr/local/share/rbenv /home/${USERNAME}/.rbenv
-fi
-
-mkdir -p /home/${USERNAME}/.rbenv/plugins
-if [[ ! -d "/home/${USERNAME}/.rbenv/plugins/ruby-build" ]]; then
-    ln -s /usr/local/share/ruby-build /home/${USERNAME}/.rbenv/plugins/ruby-build
-fi
-
-echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> /home/${USERNAME}/.bashrc
-eval "$(/usr/local/share/rbenv/bin/rbenv init - bash)"
+echo 'eval "$(${HOME}/.rbenv/bin/rbenv init - bash)"' >> /home/${USERNAME}/.bashrc
+eval "$(${HOME}/rbenv/bin/rbenv init - bash)"
 rbenv install ${RUBY_VERSION}
 
 # Clean up
