@@ -1,6 +1,6 @@
 {
   "id": "ruby",
-  "version": "1.0.32",
+  "version": "1.0.33",
   "name": "ruby (via rbenv)",
   "options": {
     "version": {

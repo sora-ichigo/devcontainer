@@ -66,8 +66,8 @@ echo 'eval "$(${HOME}/.rbenv/bin/rbenv init - bash)"' >> /home/${USERNAME}/.bash
 chown -R ${USERNAME}:${USERNAME} /home/${USERNAME}/.rbenv
 chmod -R 755 /home/${USERNAME}/.rbenv
 
-sudo -u ${USERNAME} -H sh -c "/home/${USERNAME}/.rbenv/bin/rbenv install \${RUBY_VERSION}"
-sudo -u ${USERNAME} -H sh -c "rbenv global \${RUBY_VERSION}"
+sudo -u ${USERNAME} -H sh -c "/home/${USERNAME}/.rbenv/bin/rbenv install ${RUBY_VERSION}"
+sudo -u ${USERNAME} -H sh -c "/home/${USERNAME}/.rbenv/bin/rbenv global ${RUBY_VERSION}"
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
