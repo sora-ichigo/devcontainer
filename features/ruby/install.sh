@@ -2,7 +2,7 @@
 
 USER_NAME="vscode"
 USERNAME="${USERNAME:-"${_REMOTE_USER:-"automatic"}"}"
-RUBY_VERSION="${VERSION:-"latest"}"
+RUBY_VERSION="${VERSION}"
 
 set -e
 
