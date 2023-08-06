@@ -5,12 +5,12 @@
     "customizations": {
       "vscode": {
         "extensions": [
+          "rebornix.Ruby",
           "kaiwood.endwise"
         ]
       },
       "settings": {
       }
     },
-    "onCreateCommand": ["echo", "$PATH"],
-    "installsAfter": ["ghcr.io/devcontainers/features/ruby:1", "ghcr.io/igsr5/devcontainer/common-tools:latest"]
+    "installsAfter": ["ghcr.io/igsr5/devcontainer/common-tools:latest"]
   }
