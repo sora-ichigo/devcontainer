@@ -51,6 +51,7 @@ if [[ ! -d "/usr/local/share/rbenv" ]]; then
 fi
 
 if [[ ! -d "/usr/local/share/ruby-build" ]]; then
+    mkdir -p /root/.rbenv/plugins
     mkdir -p /home/${USERNAME}/.rbenv/plugins
     git clone --depth=1 \
         -c core.eol=lf \
