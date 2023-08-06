@@ -61,7 +61,11 @@ if [[ ! -d "/usr/local/share/ruby-build" ]]; then
 fi
 
 echo 'eval "$(${HOME}/.rbenv/bin/rbenv init - bash)"' >> /home/${USERNAME}/.bashrc
-# rbenv install ${RUBY_VERSION}
+chown -R ${USERNAME}:${USERNAME} ~/.rbenv
+chmod -R 755 ~/.rbenv
+
+eval "$(${HOME}/.rbenv/bin/rbenv init - bash)"
+rbenv install ${RUBY_VERSION}
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
