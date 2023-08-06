@@ -1,7 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainerFeature.schema.json",
     "id": "ruby",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "name": "ruby for igsr5",
     "customizations": {
       "vscode": {

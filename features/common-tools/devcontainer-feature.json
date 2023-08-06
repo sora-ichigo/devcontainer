@@ -6,9 +6,6 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "rebornix.Ruby",
-        "kaiwood.endwise",
-
         "golang.go",
 
         "GraphQL.vscode-graphql-syntax",
