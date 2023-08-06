@@ -1,0 +1,47 @@
+{
+    "id": "igsr5-sandbox-example",
+    "version": "1.0.0",
+    "name": "IGSR5 Sandbox Example",
+    "customizations": {
+      // Configure properties specific to VS Code.
+      "vscode": {
+        // Add the IDs of extensions you want installed when the container is created.
+        "extensions": [
+          // For ruby development
+          "rebornix.Ruby",
+          "kaiwood.endwise",
+
+          // For golang development
+          "golang.go",
+
+          // For frontend development
+          "GraphQL.vscode-graphql-syntax",
+          "esbenp.prettier-vscode",
+          "figma.figma-vscode-extension",
+          "crystal-spider.jsdoc-generator", // command + shift + p -> generate jsdoc. added by @igsr5
+
+          // For dx development
+          "github.vscode-github-actions",
+
+          // For general development
+          "github.copilot",
+          "gitHub.copilot-chat",
+          "ms-vsliveshare.vsliveshare",
+          "formulahendry.auto-close-tag",
+          "eamodio.gitlens", // ファイル選択行の git history を表示 added by @igsr5
+          "alefragnani.Bookmarks", // 任意の行をブックマークしていつでもジャンプできるようになる added by @igsr5
+          "zhang-renyang.chat-gpt", // vscode 上で ChatGPT が使えるようになる added by @igsr5
+          "usernamehw.errorlens" // エラーのインライン表示 added by @igsr5
+        ]
+      },
+      "settings": {
+        // For frontend development
+        "typescript.preferGoToSourceDefinition": true, // definition jump の先を型ではなく実装にする added by @igsr5
+        "javascript.preferGoToSourceDefinition": true, // definition jump の先を型ではなく実装にする added by @igsr5
+
+        // For general development
+        "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true
+      }
+    }
+  }
