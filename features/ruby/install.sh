@@ -1,6 +1,5 @@
 #!/bin/bash
 
-USER_NAME="vscode"
 USERNAME="${USERNAME:-"${_REMOTE_USER:-"automatic"}"}"
 RUBY_VERSION="${VERSION}"
 
@@ -68,7 +67,8 @@ chown -R ${USERNAME}:${USERNAME} /home/${USERNAME}/.rbenv
 chmod -R 755 /home/${USERNAME}/.rbenv
 
 eval "$(/home/${USERNAME}/.rbenv/bin/rbenv init - bash)"
-rbenv install ${RUBY_VERSION}
+sudo -u ${USERNAME} -H sh -c "rbenv install \${RUBY_VERSION}"
+sudo -u ${USERNAME} -H sh -c "rbenv global \${RUBY_VERSION}"
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
