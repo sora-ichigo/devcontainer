@@ -1,6 +1,12 @@
 name: "Release dev container features"
 on:
   push:
+    branches:
+      - master
+    paths:
+      - "**/devcontainer-feature.json"
+  workflow_dispatch:
+
 permissions:
   packages: write
 
