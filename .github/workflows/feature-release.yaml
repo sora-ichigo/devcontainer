@@ -1,6 +1,10 @@
 name: "Release dev container features & Generate Documentation"
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - "**/devcontainer-feature.json"
 
 jobs:
   deploy:
