@@ -27,7 +27,7 @@ check_packages() {
 # Ensure apt is in non-interactive to avoid prompts
 export DEBIAN_FRONTEND=noninteractive
 
-# postgresqlのインストール
+# Install postgresql
 echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list \
 && wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - \
 && check_packages postgresql-13 \
@@ -36,18 +36,15 @@ echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" 
 && sed -i 's/md5/trust/g'  /etc/postgresql/13/main/pg_hba.conf \
 && sed -i 's/peer/trust/g'  /etc/postgresql/13/main/pg_hba.conf
 
-# パッケージのインストール (依存)
-apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends \
-    libxcb-randr0-dev libxcb-xtest0-dev libxcb-xinerama0-dev libxcb-shape0-dev libxcb-xkb-dev \
+# Install dependencies packages
+check_packages libxcb-randr0-dev libxcb-xtest0-dev libxcb-xinerama0-dev libxcb-shape0-dev libxcb-xkb-dev \
     libnss3-dev iptables libx11-dev libxtst6 sshfs libncurses5-dev libncursesw5-dev libpq-dev \
     git-core bash-completion
 
-# パッケージのインストール (ツール)
-apt-get update && export DEBIAN_FRONTEND=noninteractive \
-&& apt-get -y install --no-install-recommends \
-    tmux neovim fzf ripgrep
+# Install devlopment tools
+check_packages tmux neovim fzf ripgrep
 
+# Setup bash
 cp .bash_history_template /home/${USERNAME}/.bash_history
 cp -r bash /home/${USERNAME}/bash
 echo -e 'for file in /home/vscode/bash/*.bash; do\n  source "$file"\ndone' >> /home/${USERNAME}/.bashrc
