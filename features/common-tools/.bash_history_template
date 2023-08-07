@@ -16,16 +16,6 @@ gh pr view -w
 neovim
 tmux new
 tmux a
-kube setup
-kube sb get po
-kube qa get po
-kube prod get po
-kube sb fork
-kube qa fork
-kube sb fork remote -c
-kube qa fork remote -c
-kube sb fork clean
-kube qa fork clean
 rails c
 RAILS_ENV=test rails db:create
 RAILS_ENV=test rails db:migrate
