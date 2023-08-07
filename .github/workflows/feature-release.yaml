@@ -1,5 +1,6 @@
 name: "Release dev container features & Generate Documentation"
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -8,7 +9,7 @@ on:
 
 jobs:
   deploy:
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ github.ref == 'refs/heads/master' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
