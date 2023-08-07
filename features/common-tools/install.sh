@@ -49,17 +49,9 @@ apt-get update && export DEBIAN_FRONTEND=noninteractive \
 && apt-get -y install --no-install-recommends \
     tmux neovim fzf ripgrep
 
-# ユーザーを変更してコマンドを実行
-su $USERNAME <<EOF
-mkdir -p \$HOME/bash
-cp bash/alias.bash \$HOME/bash/alias.bash
-echo 'source \$HOME/bash/alias.bash' >> \$HOME/.bashrc
-cp bash/functions.bash \$HOME/bash/functions.bash
-echo 'source \$HOME/bash/functions.bash' >> \$HOME/.bashrc
-cp bash/.bash_history \$HOME/.bash_history
-cp bash/prompt.bash \$HOME/bash/prompt.bash
-echo 'source \$HOME/bash/prompt.bash' >> \$HOME/.bashrc
-EOF
+cp .bash_history_template /home/${USERNAME}/.bash_history
+cp -r bash /home/${USERNAME}/bash
+echo "source /home/${USERNAME}/bash/*.bash" >> /home/${USERNAME}/.bashrc
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
