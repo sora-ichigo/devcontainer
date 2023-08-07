@@ -42,7 +42,14 @@ check_packages libxcb-randr0-dev libxcb-xtest0-dev libxcb-xinerama0-dev libxcb-s
     git-core bash-completion
 
 # Install dependencies (development tools)
-check_packages tmux neovim fzf ripgrep
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+check_packages tmux neovim fzf ripgrep gh
+
+# Install git completion
+wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
+chmod a+x ~/.git-completion.bash
 
 mkdir /home${USERNAME}/bash
 cp -r bash /home/${USERNAME}/bash
