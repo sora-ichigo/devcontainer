@@ -51,7 +51,7 @@ apt-get update && export DEBIAN_FRONTEND=noninteractive \
 
 cp .bash_history_template /home/${USERNAME}/.bash_history
 cp -r bash /home/${USERNAME}/bash
-echo "source /home/${USERNAME}/bash/*.bash" >> /home/${USERNAME}/.bashrc
+echo -e 'for file in /home/vscode/bash/*.bash; do\n  source "$file"\ndone' >> /home/${USERNAME}/.bashrc
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
