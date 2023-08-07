@@ -25,8 +25,13 @@ jobs:
           base-path-to-features: "./features"
           generate-docs: "true"
 
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create PR for Documentation
         id: push_image_info
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -e
           echo "Start."
