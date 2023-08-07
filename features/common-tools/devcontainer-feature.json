@@ -1,6 +1,6 @@
 {
   "id": "common-tools",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "development tools for igsr5",
   "customizations": {
     "vscode": {
