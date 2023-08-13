@@ -7,7 +7,7 @@
 
 ```json
 "features": {
-    "ghcr.io/wantedly/devcontainer-features/ruby:1": {}
+    "ghcr.io/igsr5/devcontainer/ruby:1": {}
 }
 ```
 
@@ -22,10 +22,14 @@
 ### VS Code Extensions
 
 - `rebornix.Ruby`
+- `hridoy.rails-snippets`
+- `aki77.rails-db-schema`
+- `sporto.rails-go-to-spec`
+- `castwide.solargraph`
 - `kaiwood.endwise`
 
 
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/wantedly/devcontainer-features/blob/main/src/ruby/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/igsr5/devcontainer/blob/main/src/ruby/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
