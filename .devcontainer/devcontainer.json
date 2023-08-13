@@ -11,7 +11,8 @@
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
     },
-    "ghcr.io/wantedly/devcontainer-features/common-utils:latest": {},
-    "ghcr.io/wantedly/devcontainer-features/ruby:latest": {}
+    "ghcr.io/igsr5/devcontainer/common-utils:latest": {},
+    "ghcr.io/igsr5/devcontainer/ruby:latest": {},
+    "ghcr.io/igsr5/devcontainer/node:latest": {}
   }
 }
