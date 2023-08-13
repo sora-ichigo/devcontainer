@@ -1,0 +1,31 @@
+{
+  "id": "node",
+  "version": "1.0.1",
+  "name": "node",
+  "onCreateCommand": "$HOME/.onCreateCommand/node",
+  "options": {
+    "version": {
+      "type": "string",
+      "default": "19.8.1",
+      "description": "Select or enter a Node.js version to install via nodenv"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GraphQL.vscode-graphql-syntax",
+        "esbenp.prettier-vscode",
+        "figma.figma-vscode-extension",
+        "crystal-spider.jsdoc-generator"
+      ],
+      "settings": {
+        "typescript.preferGoToSourceDefinition": true,
+        "javascript.preferGoToSourceDefinition": true,
+        "[javascript][typescript]": {
+          "editor.formatOnSave": true,
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        }
+      }
+    }
+  }
+}

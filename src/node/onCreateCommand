@@ -1,0 +1,15 @@
+#!/bin/bash
+echo "Start onCreateCommand (node)."
+
+echo "Installing yarn..."
+npm i -g yarn
+echo "Finished installing yarn."
+
+# yarn install
+if [ -f "package.json" ]; then
+  echo "package.json found, running yarn install..."
+  export NPM_TOKEN="$ORG_SHARED_NPM_TOKEN"
+  yarn install
+else
+  echo "package.json not found in the current directory. Skipping yarn install."
+fi
