@@ -1,6 +1,6 @@
 {
   "id": "node",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "node",
   "onCreateCommand": "$HOME/.onCreateCommand/node",
   "options": {
@@ -16,7 +16,8 @@
         "GraphQL.vscode-graphql-syntax",
         "esbenp.prettier-vscode",
         "figma.figma-vscode-extension",
-        "crystal-spider.jsdoc-generator"
+        "crystal-spider.jsdoc-generator",
+        "yoavbls.pretty-ts-errors"
       ],
       "settings": {
         "typescript.preferGoToSourceDefinition": true,
