@@ -7,7 +7,7 @@
 
 ```json
 "features": {
-    "ghcr.io/wantedly/devcontainer-features/node:1": {}
+    "ghcr.io/igsr5/devcontainer/node:1": {}
 }
 ```
 
@@ -30,4 +30,4 @@
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/wantedly/devcontainer-features/blob/main/src/node/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/igsr5/devcontainer/blob/main/src/node/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
