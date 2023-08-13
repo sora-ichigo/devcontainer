@@ -25,6 +25,7 @@
 - `esbenp.prettier-vscode`
 - `figma.figma-vscode-extension`
 - `crystal-spider.jsdoc-generator`
+- `yoavbls.pretty-ts-errors`
 
 
 
