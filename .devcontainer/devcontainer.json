@@ -1,0 +1,17 @@
+{
+  "name": "dev",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "runArgs": ["--cap-add=NET_ADMIN", "--cap-add=NET_BIND_SERVICE"],
+  "hostRequirements": {
+    "cpus": 8,
+    "memory": "8gb",
+    "storage": "32gb"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    },
+    "ghcr.io/wantedly/devcontainer-features/common-utils:latest": {},
+    "ghcr.io/wantedly/devcontainer-features/ruby:latest": {}
+  }
+}

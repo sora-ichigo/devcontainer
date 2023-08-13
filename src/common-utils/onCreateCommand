@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Start onCreateCommand (common-utils)."
+
+echo "Done!"

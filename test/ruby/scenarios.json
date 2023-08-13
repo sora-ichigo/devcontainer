@@ -1,0 +1,8 @@
+{
+  "ruby": {
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+      "ruby": {}
+    }
+  }
+}

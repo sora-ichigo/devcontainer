@@ -1,0 +1,42 @@
+{
+  "id": "ruby",
+  "version": "1.0.8",
+  "name": "ruby",
+  "onCreateCommand": "$HOME/.onCreateCommand/ruby",
+  "options": {
+    "version": {
+      "type": "string",
+      "default": "3.2.2",
+      "description": "Select or enter a Ruby version to install via rbenv"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rebornix.Ruby",
+        "hridoy.rails-snippets",
+        "aki77.rails-db-schema",
+        "sporto.rails-go-to-spec",
+        "castwide.solargraph",
+        "kaiwood.endwise"
+      ],
+      "settings": {
+        "ruby.intellisense": "rubyLocate",
+        "ruby.useLanguageServer": true,
+        "ruby.lint": {
+          "rubocop": {
+            "useBundler": true,
+            "configFilePath": ".rubocop.yml"
+          }
+        },
+        "ruby.format": "rubocop",
+        "[ruby]": {
+          "editor.formatOnSave": true
+        },
+        "editor.formatOnSaveTimeout": 5000,
+        "solargraph.definitions": true,
+        "solargraph.diagnostics": true
+      }
+    }
+  }
+}

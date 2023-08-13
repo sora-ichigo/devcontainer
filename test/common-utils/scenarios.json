@@ -1,0 +1,8 @@
+{
+  "common-utils": {
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+      "common-utils": {}
+    }
+  }
+}

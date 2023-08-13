@@ -1,0 +1,27 @@
+{
+  "id": "common-utils",
+  "version": "1.0.10",
+  "name": "common-utils",
+  "onCreateCommand": "$HOME/.onCreateCommand/common-utils",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.copilot",
+        "gitHub.copilot-chat",
+        "ms-vsliveshare.vsliveshare",
+        "formulahendry.auto-close-tag",
+        "eamodio.gitlens",
+        "alefragnani.Bookmarks",
+        "zhang-renyang.chat-gpt",
+        "usernamehw.errorlens",
+        "github.vscode-github-actions",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true,
+        "json.editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+#!/bin/bash
+echo "Start onCreateCommand (ruby)."
+
+gem install solargraph
+
+# bundle install
+if [ -f "Gemfile" ]; then
+  echo "Gemfile found, running bundle install..."
+  bundle install --jobs=4
+else
+  echo "Gemfile not found in the current directory. Skipping bundle install."
+fi
+
+# Set up DB
+if [ -d "db" ]; then
+  echo "Set up dbs."
+
+  # Check for Postgres
+  if pgrep postgres > /dev/null; then
+    echo "  + PostgreSQL is running."
+  else
+    echo "  x Starting PostgreSQL"
+    sudo service postgresql start
+    if pgrep postgres > /dev/null; then
+      echo "  + PostgreSQL is running."
+    else
+      echo_red "  x Couldn't start Postgres.app."
+    fi
+  fi
+
+  echo "It takes a few minutes."
+  echo "Run 'bundle exec rails db:create'"
+  ANNOTATE_SKIP_ON_DB_MIGRATE=1 bundle exec rails db:create 1>/dev/null
+  echo "  + Run 'bundle exec rails db:schema:load db:test:prepare'"
+  ANNOTATE_SKIP_ON_DB_MIGRATE=1 bundle exec rails db:schema:load db:test:prepare  1>/dev/null
+else
+  echo "db not found in the current directory. Skipping set up DB."
+fi
+
+echo "Done!"
